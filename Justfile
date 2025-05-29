@@ -14,7 +14,7 @@ serve:
 
 # Run tests using pytest
 test:
-    .venv/bin/python -m pytest --cov=server --cov-report=term-missing
+    .venv/bin/python -m pytest --cov=backend/server --cov-report=term-missing
 
 # Format code using black
 format:
