@@ -1,5 +1,3 @@
-
-[![GitHub Actions](https://img.shields.io/github/workflow/status/yourusername/fastapi-crud-mcp/CI/main?label=build&logo=github)](https://github.com/brunolnetto/fastapi-crud-mcp/actions)
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
