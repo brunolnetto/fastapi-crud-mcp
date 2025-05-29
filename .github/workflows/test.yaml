@@ -66,8 +66,7 @@ jobs:
       #----------------------------------------------
       #       Update codecov coverage
       #----------------------------------------------
-      - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v3
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v5
         with:
-          files: ./coverage.xml
-          verbose: true
+          token: ${{ secrets.CODECOV_TOKEN }}
