@@ -85,8 +85,7 @@ A minimal CRUD API for “items,” built with FastAPI and exposed as MCP tools 
 ## 🏃 Running the Server
 
 ```bash
-cd backend/server
-python main.py
+docker compose up -d --build
 ```
 
 * **API docs** → `http://localhost:8000/docs`
