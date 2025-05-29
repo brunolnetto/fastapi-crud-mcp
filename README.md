@@ -96,7 +96,7 @@ docker compose up -d --build
 ## 🤖 Running the Scenario Client
 
 ```bash
-python3 -m backend.server.main
+python3 -m backend.client.main
 ```
 
 This harness will:
