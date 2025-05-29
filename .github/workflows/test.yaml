@@ -59,15 +59,15 @@ jobs:
       #----------------------------------------------
       - name: Run tests and generate coverage
         run: |
-          uv run pytest --cov=backend/server tests/
+          uv run pytest --cov=backend/server --cov-report=xml tests/
           # Uncomment when achieve sufficient coverage threshold
           uv run coverage report -m
 
       #----------------------------------------------
       #       Update codecov coverage
       #----------------------------------------------
-      - name: Upload test results to Codecov
-        if: ${{ !cancelled() }}
-        uses: codecov/test-results-action@v1
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v3
         with:
-          token: ${{ secrets.CODECOV_TOKEN }}
+          files: ./coverage.xml
+          verbose: true
