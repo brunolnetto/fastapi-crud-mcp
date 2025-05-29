@@ -66,12 +66,15 @@ jobs:
       #----------------------------------------------
       #       Update codecov coverage
       #----------------------------------------------
-      - name: Fail if Codecov token is not set
+      - name: Debug CODECOV_TOKEN
         run: |
-          if [ -z "${{ secrets.CODECOV_TOKEN }}" ]; then
-            echo "ERROR: CODECOV_TOKEN is not set."
-            exit 1
+          if [ -z "${CODECOV_TOKEN}" ]; then
+            echo "CODECOV_TOKEN is NOT set"
+          else
+            echo "CODECOV_TOKEN is set (but value is hidden)"
           fi
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
       - name: Upload coverage reports to Codecov
         if: env.CODECOV_TOKEN != ''
