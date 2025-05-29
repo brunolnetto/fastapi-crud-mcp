@@ -1,5 +1,3 @@
-
-[![GitHub Actions](https://img.shields.io/github/workflow/status/yourusername/fastapi-crud-mcp/CI/main?label=build&logo=github)](https://github.com/brunolnetto/fastapi-crud-mcp/actions)
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
@@ -50,7 +48,7 @@ A minimal CRUD API for “items,” built with FastAPI and exposed as MCP tools 
    ```bash
    git clone https://github.com/yourusername/fastapi-crud-mcp.git
    cd fastapi-crud-mcp
-````
+   ```
 
 2. **Create & activate a virtualenv**
 
@@ -62,7 +60,7 @@ A minimal CRUD API for “items,” built with FastAPI and exposed as MCP tools 
 3. **Install dependencies**
 
    ```bash
-   pip install -r requirements.txt
+   uv sync
    ```
 
 4. **Environment variables**
@@ -75,11 +73,11 @@ A minimal CRUD API for “items,” built with FastAPI and exposed as MCP tools 
    ```env
    MCP_HOST_URL='http://127.0.0.1:8000/mcp'
 
-    LLM_PROVIDER='openai'
-    LLM_MODEL_NAME='gpt-4o-mini'
-    LLM_MODEL=${LLM_PROVIDER}:${LLM_MODEL_NAME}
+   LLM_PROVIDER='openai'
+   LLM_MODEL_NAME='gpt-4o-mini'
+   LLM_MODEL=${LLM_PROVIDER}:${LLM_MODEL_NAME}
 
-    OPENAI_API_KEY=sk-proj-your-api-key-here
+   OPENAI_API_KEY=sk-proj-your-api-key-here
    ```
 
 ---
@@ -87,8 +85,7 @@ A minimal CRUD API for “items,” built with FastAPI and exposed as MCP tools 
 ## 🏃 Running the Server
 
 ```bash
-cd backend/server
-python main.py
+docker compose up -d --build
 ```
 
 * **API docs** → `http://localhost:8000/docs`
@@ -99,7 +96,7 @@ python main.py
 ## 🤖 Running the Scenario Client
 
 ```bash
-python3 -m backend.server.main
+python3 -m backend.client.main
 ```
 
 This harness will:
