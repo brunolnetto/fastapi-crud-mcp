@@ -1,3 +1,4 @@
+[![codecov](https://codecov.io/gh/brunolnetto/fastapi-crud-mcp/graph/badge.svg?token=71M0EVUD98)](https://codecov.io/gh/brunolnetto/fastapi-crud-mcp)
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
